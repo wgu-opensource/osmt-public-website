@@ -1,0 +1,151 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Default theme colors
+$theme-colors: (
+  "coolblack": #090a0b,
+  "spacegrey": #353535,
+  "snowwhite": #ffffff,
+);
+
+// Default brand colors
+$brand-colors: (
+  "orangered": #ff5100,
+  "greatgold": #f2cb05,
+  "greenblue": #389092,
+);
+
+$theme-name: "{{ site.theme_color }}";
+$brand-name: "{{ site.brand_color }}";
+$theme-color: map-get($theme-colors, "snowwhite");
+$brand-color: map-get($brand-colors, "orangered");
+
+@if map-has-key($theme-colors, $theme-name) {
+  $theme-color: map-get($theme-colors, $theme-name);
+} @else if str-index($theme-name, "#") == 1 {
+  $theme-color: {{ site.theme_color | default: '#ffffff' }};
+}
+
+@if map-has-key($brand-colors, $brand-name) {
+  $brand-color: map-get($brand-colors, $brand-name);
+} @else if str-index($brand-name, "#") == 1 {
+  $brand-color: {{ site.brand_color | default: '#ff5100' }};
+}
+
+$content-width: {{ site.content_width | default: '920px' }};
+
+@import "yat";
+
+.banner-slim {
+  padding-bottom: 50px;
+}
+
+//document collapse
+
+.collapsible {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 18px;
+  background-color: #472f8e;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.collapsible:hover {
+  background-color: mediumpurple;;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible.active:after {
+  content: "\2212";
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 2em;
+}
+
+.content > p, .content > ol {
+  margin-top: 0;
+}
+
+//github button
+button {
+  background: #472f8e;
+  cursor: pointer;
+  color: white !important;
+  border-radius: 7px;
+  border: 0px;
+  font-size: 20.25px;
+  font-weight: 300;
+  padding: 0px 10px;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  font-family: source-sans-pro, Source Sans Pro, Helvetica, Arial, sans-serif, sans-serif;
+  line-height: initial;
+}
+
+.page-banner-subheading {
+  font-family: Helvetica, Arial, sans-serif, sans-serif;
+  line-height: 1em;
+  font-weight: 400 !important;
+}
+
+//whyosmt P paragraph class
+.osmtContent {
+  margin: 10px 0 60px 0;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.strongOsmt {
+  font-size: 2.2em;
+  font-weight: 300;
+}
+
+h1, h2 {
+  font-size: 2.2em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.colorBand { 
+  background-color: #f6f3ff;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}

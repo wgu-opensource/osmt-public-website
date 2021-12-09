@@ -1,0 +1,7 @@
+.idea/
+.jekyll-cache/
+stale_outputs_checked
+_site/
+.DS_Store
+assets/.DS_Store
+vendor/
