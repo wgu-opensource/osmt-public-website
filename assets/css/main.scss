@@ -118,7 +118,7 @@ dl, dd, ol, ul, figure {
 }
 
 .strongOsmt {
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-weight: 300;
 }
 
@@ -126,6 +126,12 @@ h1, h2 {
   font-size: 2.2em;
   font-weight: 400;
   margin-bottom: 10px;
+}
+
+.siteTitle {
+  font-style: italic;
+  font-size: 1.4em;
+  margin-bottom: 80px;
 }
 
 .videoWrapper {
@@ -148,4 +154,10 @@ h1, h2 {
   background-color: #f6f3ff;
   padding-top: 50px;
   margin-bottom: 50px;
+}
+
+.site-nav input:checked ~ .trigger {
+  display: block;
+  background: #ffffff;
+  padding-bottom: 18px;
 }
