@@ -149,6 +149,7 @@ header_pages:
  - why-osmt.html
  - docs.html
  - support.html
+ - release.html
 
 compress_html:
   clippings: [all]
