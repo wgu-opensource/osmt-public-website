@@ -3,22 +3,27 @@ layout: release
 title: Releases
 miniBanner: true
 ---
-<h1> OSMT Releases</h1>
-<p class="osmtContent"><em>OSMT Release provided new things added to the OSMT open-source community.</em></p>
 
-<h2 style="font-size: xx-large"> OSMT 1.1.0 Coming Soon....</h2>
-<p><em>RELEASES | John Kallies | OCTOBER 25, 2021</em> </p>
-<p>On behalf of the community, I am pleased to announce that the 1.1.0 release of <a href="https://github.com/wgu-opensource/osmt/tree/release-1.0.5" target="_blank"> OSMT </a> is available today.
- The release can be found in <a href="https://github.com/wgu-opensource/osmt/releases" target="_blank">dockerhub image</a>. You can check out the 1.1.0 <a href="https://github.com/wgu-opensource/osmt/releases" target="_blank"> release notes </a>for more information.</p>
+<style>
+
+</style>
+<h1> OSMT Releases</h1>
+<p class="osmtContent"><em>The latest releases and history of changes from the OSMT open-source community.</em></p>
+
+<h2 class="h2ForntSize"> OSMT 1.1.0 Coming Soon....</h2>
+<p class="p"><em>RELEASES | John Kallies | OCTOBER 25, 2021</em> </p>
+
+<a href="https://github.com/wgu-opensource/osmt/releases/tag/1.0.5" target="_blank"> Release Notes</a> | <a href="https://hub.docker.com/repository/docker/wguopensource/osmt-app" target="_blank">Release Artifacts </a>
+<div>
 <h3> Notable Changes in release 1.1.0:</h3>
 
 <h4><em>Features and Enhancements: </em></h4>
 <ul>
  <li>Added capability for multiple alignments</li>
  <li>Allow anonymous API access to searching</li>
- <li>Include BLS job codes when skills are imported <span id="dots">.......</span></li>
+ <li>Include BLS job codes when skills are imported</li>
 </ul>
-<span id="more" style="display: none">
+<span class="toggle-text">
 <h4><em>Bug Fixes:</em></h4>
 <ul>
  <li>Removed ambiguous functionality around author editing</li>
@@ -32,22 +37,24 @@ miniBanner: true
  <li>Added 'oauth' Spring profile for local development</li>
 </ul>
 </span>
-<button style="padding:10px; text-align: center" onclick="myFunction()" id="myBtn">Read More</button>
+<p class="osmtContent"><a class="toggle-text-button">Read More</a></p>
+</div>
 
 
+<h2 class="h2ForntSize"> OSMT 1.0.5 has been released</h2>
+<p class="p"><em>RELEASES | John Kallies | OCTOBER 25, 2021</em> </p>
 
-<h2 style="font-size: xx-large"> OSMT 1.0.5 has been released</h2>
-<p><em>RELEASES | John Kallies | OCTOBER 25, 2021</em> </p>
-<p>On behalf of the community, I am pleased to announce that the 1.0.5 release of <a href="https://github.com/wgu-opensource/osmt/tree/release-1.0.5" target="_blank"> OSMT </a> is available today. The release can be found in <a href="https://github.com/wgu-opensource/osmt/releases" target="_blank">Github</a>. You can check out the 1.0.5 <a href="https://github.com/wgu-opensource/osmt/releases" target="_blank"> release notes </a>for more information.</p>
+<a href="https://github.com/wgu-opensource/osmt/releases/tag/1.0.5" target="_blank"> Release Notes</a> | <a href="https://hub.docker.com/repository/docker/wguopensource/osmt-app" target="_blank">Release Artifacts </a>
+<div>
 <h3> Notable Changes in release 1.0.5:</h3>
 
 <h4><em>Features and Enhancements: </em></h4>
 <ul>
  <li>Added capability for multiple alignments</li>
  <li>Allow anonymous API access to searching</li>
- <li>Include BLS job codes when skills are imported <span id="dots">.......</span></li>
+ <li>Include BLS job codes when skills are imported</li>
 </ul>
-<span id="more" style="display: none">
+<span class="toggle-text">
 <h4><em>Bug Fixes:</em></h4>
 <ul>
  <li>Removed ambiguous functionality around author editing</li>
@@ -61,22 +68,18 @@ miniBanner: true
  <li>Added 'oauth' Spring profile for local development</li>
 </ul>
 </span>
-<button style="padding:10px; text-align: center" onclick="myFunction()" id="myBtn">Read More</button>
+<a class="toggle-text-button">Read More</a>
+</div>
+
 
 <script>
- function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-   dots.style.display = "inline";
-   btnText.innerHTML = "Read More";
-   moreText.style.display = "none";
+ $(document).on("click", ".toggle-text-button", function() {
+  if ($(this).text() == "Read More") {
+   $(this).text("Read Less");
+   $(this).parent().children(".toggle-text").slideDown();
   } else {
-   dots.style.display = "none";
-   btnText.innerHTML = "Read Less";
-   moreText.style.display = "inline";
+   $(this).text("Read More");
+   $(this).parent().children(".toggle-text").slideUp();
   }
- }
+ });
 </script>

@@ -96,6 +96,18 @@ button {
   font-weight: 300;
   padding: 0px 10px;
 }
+button:hover {
+  background-color: mediumpurple
+}
+
+.p{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.toggle-text {
+  display: none;
+}
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -117,6 +129,9 @@ dl, dd, ol, ul, figure {
   text-align: justify;
 }
 
+.h2ForntSize{
+  font-size: xx-large;
+}
 .strongOsmt {
   font-size: 1.8em;
   font-weight: 300;
