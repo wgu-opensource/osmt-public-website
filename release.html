@@ -16,9 +16,9 @@ miniBanner: true
 <ul>
  <li>Added capability for multiple alignments</li>
  <li>Allow anonymous API access to searching</li>
- <li>Include BLS job codes when skills are imported</li>
+ <li>Include BLS job codes when skills are imported <span id="dots">.......</span></li>
 </ul>
-
+<span id="more" style="display: none">
 <h4><em>Bug Fixes:</em></h4>
 <ul>
  <li>Removed ambiguous functionality around author editing</li>
@@ -31,6 +31,10 @@ miniBanner: true
  <li>Aligned docker-compose stacks under a "Quickstart" demo configuration and a "Development" configuration</li>
  <li>Added 'oauth' Spring profile for local development</li>
 </ul>
+</span>
+<button style="padding:10px; text-align: center" onclick="myFunction()" id="myBtn">Read More</button>
+
+
 
 <h2 style="font-size: xx-large"> OSMT 1.0.5 has been released</h2>
 <p><em>RELEASES | John Kallies | OCTOBER 25, 2021</em> </p>
@@ -41,9 +45,9 @@ miniBanner: true
 <ul>
  <li>Added capability for multiple alignments</li>
  <li>Allow anonymous API access to searching</li>
- <li>Include BLS job codes when skills are imported</li>
+ <li>Include BLS job codes when skills are imported <span id="dots">.......</span></li>
 </ul>
-
+<span id="more" style="display: none">
 <h4><em>Bug Fixes:</em></h4>
 <ul>
  <li>Removed ambiguous functionality around author editing</li>
@@ -56,3 +60,23 @@ miniBanner: true
  <li>Aligned docker-compose stacks under a "Quickstart" demo configuration and a "Development" configuration</li>
  <li>Added 'oauth' Spring profile for local development</li>
 </ul>
+</span>
+<button style="padding:10px; text-align: center" onclick="myFunction()" id="myBtn">Read More</button>
+
+<script>
+ function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+   dots.style.display = "inline";
+   btnText.innerHTML = "Read More";
+   moreText.style.display = "none";
+  } else {
+   dots.style.display = "none";
+   btnText.innerHTML = "Read Less";
+   moreText.style.display = "inline";
+  }
+ }
+</script>
