@@ -97,6 +97,19 @@ button {
   padding: 0px 10px;
 }
 
+button:hover {
+  background-color: mediumpurple
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.toggle-text {
+  display: none;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -117,12 +130,16 @@ dl, dd, ol, ul, figure {
   text-align: justify;
 }
 
-.strongOsmt {
+h2, .osmt-bullets {
   font-size: 1.8em;
   font-weight: 300;
 }
 
-h1, h2 {
+.title-font {
+  font-size: xx-large;
+}
+
+h1{
   font-size: 2.2em;
   font-weight: 400;
   margin-bottom: 10px;
@@ -150,7 +167,7 @@ h1, h2 {
   height: 100%;
 }
 
-.colorBand { 
+.colorBand {
   background-color: #f6f3ff;
   padding-top: 50px;
   margin-bottom: 50px;
