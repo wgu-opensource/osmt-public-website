@@ -5,6 +5,60 @@ miniBanner: true
 ---
     <h1>How-To</h1>
     <p class="osmtContent"><em>A step-by-step guide and helpful tips for users to complete the core tasks within OSMT.</em></p>
+
+    <div class="collapsible">Starting a Local OSMT</div>
+    <div class="content">
+        <p>OSMT is server-based software, but you can try it out locally with OSMT's Quickstart. This local installation is for evaluation purposes. You can export RSDs and Collections, but the database behind a local Quickstart should be considered "temporary".</p>
+        <p>The actual installation of a production OSMT might look different for every organizartion. WGU and the OSMT community are actively working on ways for organizations to deploy "permanent" production OSMT instances, including what we would call "reference architectures" -- prescriptive models that could be used by multiple customers within a given cloud provider's environment. Please follow and engage with this <a href="https://github.com/wgu-opensource/osmt/issues/123" target="_blank">Issue</a> in our GitHub.</p>
+        <h3>Pre-requisites</h3>
+        <p>To start OSMT using the Quickstart, you will need <a href="https://git-scm.com/downloads" target="_blank">git</a> and <a href="https://docs.docker.com/get-docker/" target="_blank">Docker</a> installed, with at least 6GB allocated to Docker. More memory will be better.</p>
+        <ul class="info-callout">
+            <h3>Running OSMT Quickstart on Windows</h3>
+            <li>Installing Docker on Windows is a manageable task, but it is not a simple double-click installation. Starting OSMT Quickstart is simpler in MacOS or in Linux. If you are a Windows user, you can install Docker with <a href="https://docs.docker.com/desktop/windows/install/" target="_blank">these instructions</a>.
+            </li>
+            <li>
+                Starting OSMT Quickstart will be done by entering commands and running BASH scripts in a "terminal" window. MacOS and Linux support this natively. In Windows, you can use "Git Bash", which comes installed with git.
+            </li>
+        </ul>
+        <h3>Running OSMT Quickstart</h3>
+        <ol>
+            <li>Open a "terminal" window, and create a directory for OSMT source code, and <code>cd</code> into it. Download the OSMT source code repo with this command:
+                <pre><code>git clone https://github.com/wgu-opensource/osmt.git</code></pre>
+                Then cd into OSMT's project directory (just created by git)
+                <pre><code>cd osmt</code></pre>
+                <h4>Using the OSMT CLI utility (osmt_cli.sh)</h4>
+                <ul class="info-callout">
+                    <li>The OSMT source code includes a utility named <code>osmt_cli.sh</code>; this simplifies setting up an OSMT environment and doing routine tasks. You can run via a terminal window, from the OSMT git repo's root directory. Run this command to see the help output:
+                        <pre><code>./osmt_cli.sh -h</code></pre>
+                        If you are using Windows, and having trouble running this help command, please see the <a href="https://github.com/wgu-opensource/osmt/discussions/131" target="_blank">"Running OSMT Quickstart from Windows"</a> thread in the <a href="https://github.com/wgu-opensource/osmt/discussions" target="_blank">Discussion</a> area.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Obtain a "free developer" Okta account. Please follow the steps in <a href="https://github.com/wgu-opensource/osmt/blob/develop/README.md#oauth2-and-okta-configuration" target="_blank"> OAuth2 and Okta Configuration</a>, and return here when complete.
+                <ul class="info-callout">
+                    <li>If your organization uses Okta for other purposes, please note that this Okta account is completely separate from any other Okta accounts or logins you may have.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Initialize your environment files by running this command:
+                <pre><code>./osmt_cli.sh -i</code></pre>
+                Next, edit the osmt-quickstart.env file and replace the 'xxxxxx' values with the correct values from your Okta account.
+            </li>
+            <li>
+                Start the Quickstart configuration. This will take several minutes to download resources and build the software. If you continue to loop on errors that report "Retrying in 10 seconds...", there's something wrong.
+                Search and reach out in the <a href="https://github.com/wgu-opensource/osmt/discussions" target="_blank">Discussion</a> boards in GitHub.
+                <pre><code>./osmt_cli.sh -q</code></pre>
+            </li>
+            <li>
+                Open your browser to <a href="http://localhost:8080">http://localhost:8080</a>. You will be prompted to log in to OSMT using Okta.
+            </li>
+            <li>
+                Pressing [Ctrl]+C in your terminal window will stop the Quickstart. You can restart it and resume your evaluation. Please take care to use Quickstart only for evaulation purposes. You can export whatever RSDs and Collections you create in Quickstart.
+            </li>
+        </ol>
+    </div>
     <div class="collapsible">Add Skills to OSMT: How to Batch Import</div>
     <div class="content">
         <p>When first accessing OSMT, there will not be any skills in the library.</p>
