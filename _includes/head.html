@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="/assets/images/osmt-social-media.png"/>
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:locale" content="en_US" />
+
   {%- feed_meta -%}
-  <title> OSMT</title>
+
+
+  <title>OSMT</title>
 </head>
