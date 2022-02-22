@@ -46,7 +46,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The Open Skills Management Tool (OSMT) makes it possible for employers, educators, military, and other stakeholders to create and share open skills libraries. OSMT advances skills-based education and hiring.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://osmt.io # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "./assets/images/osmt-logo-symbol.svg" # the favicon for your site
 
 # Yat date format
